@@ -1,6 +1,7 @@
 package me.lukas.skyblockmultiplayer;
 
-public enum Config {
+public enum Config
+{
 
 	OPTIONS_ISLANDDISTANCE("options.islandDistance"),
 	OPTIONS_CHESTITEMS("options.chest.Items"),
@@ -10,7 +11,8 @@ public enum Config {
 
 	String path;
 
-	private Config(String path) {
+	private Config(String path)
+	{
 		this.path = path;
 	}
 }

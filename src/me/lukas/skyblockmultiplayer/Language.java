@@ -1,6 +1,7 @@
 package me.lukas.skyblockmultiplayer;
 
-public enum Language {
+public enum Language
+{
 
 	MSGS_SKYBLOCK("msgs.skyblock", "Use \"/skyblock help\" for more information."),
 	MSGS_STOPPING("msgs.stopping", "Stopping Skyblock..."),
@@ -25,11 +26,12 @@ public enum Language {
 	MSGS_STATUSONLINE("msgs.statusOnline", "Is Online."),
 	MSGS_NUMBEROFISLANDS("msgs.numberOfIslands", "Number of islands: "),
 	MSGS_NUMBEROFPLAYERS("msgs.numberOfPlayers", "Number of players: "),
-	/**commands list**/
+	/** commands list **/
 	MSGS_CMDJOIN("msgs.commands.join", "/skyblock join - join Skyblock"),
 	MSGS_CMDSTART("msgs.commands.start", "/skyblock start - get an island"),
 	MSGS_CMDLEAVE("msgs.commands.leave", "/skyblock leave - leave Skyblock"),
-	MSGS_CMDNEWISLAND("msgs.commands.newIsland", "/skyblock newIsland [player] - give yourself or an other player a new island"),
+	MSGS_CMDNEWISLAND("msgs.commands.newIsland",
+			"/skyblock newIsland [player] - give yourself or an other player a new island"),
 	MSGS_CMDSETOFFLINE("msgs.commands.setOffline", "/skyblock set offline - deactivate Skyblock"),
 	MSGS_CMDSETONLINE("msgs.commands.setOnline", "/skyblock set online - activate Skyblock"),
 	MSGS_CMDSETLANGUAGE("msgs.commands.setLanguage", "/skyblock set language <language> - change language"),
@@ -38,7 +40,7 @@ public enum Language {
 	MSGS_CMDRELOADCONFIG("msgs.commands.reloadConfig", "/skyblock reload config - reload config"),
 	MSGS_CMDRELOADLANGUAGE("msgs.commands.reloadLanguage", "/skyblock reload language - reload language"),
 	MSGS_CMDSTATUS("msgs.commands.status", "/skyblock status - show status"),
-	/**end of commands**/
+	/** end of commands **/
 	MSGS_WRONGARGS("msgs.wrongArgs", "Incorrect or missing arguments"),
 	MSGS_WELCOME1("msgs.welcome1", "Welcome to the world Skyblock for multiplayer! At the moment there are "),
 	MSGS_WELCOME2("msgs.welcome2", " islands and  "),
@@ -50,7 +52,8 @@ public enum Language {
 	MSGS_TONEWPLAYER("msgs.toNewPlayer", "Do not fall and make no obsidian :-)."),
 	MSGS_showIslandNumber("msgs.showIslandNumber", "You are on island number "),
 	MSGS_LEFTSKYBLOCK("msgs.leftSkyblock", "You left Skyblock."),
-	MSGS_NOEMPTYINVENTORYLEAVE("msgs.noEmptyInventoryLeave", "You cannot leave skyblock with content in your inventory."),
+	MSGS_NOEMPTYINVENTORYLEAVE("msgs.noEmptyInventoryLeave",
+			"You cannot leave skyblock with content in your inventory."),
 	MSGS_NOEMPTYINVENTORYSTART("msgs.noEmptyInventoryStart", "You can not play with content in your inventory."),
 	MSGS_WRONEPLAYERNAME("msgs.wrongPlayerName", "There is no player with that name. Or the player is not in Skyblock."),
 	MSGS_NEWISLANDPLAYER1("msgs.newIslandPlayer1", "The player "),
@@ -72,7 +75,8 @@ public enum Language {
 	String path;
 	String sentence;
 
-	private Language(String path, String sentence) {
+	private Language(String path, String sentence)
+	{
 		this.path = path;
 		this.sentence = sentence;
 	}
