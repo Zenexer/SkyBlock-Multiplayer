@@ -15,7 +15,6 @@ import org.bukkit.WorldType;
 import org.bukkit.block.Sign;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
@@ -116,7 +115,7 @@ public class SkyBlockMultiplayer extends JavaPlugin {
 		} else {
 			try {
 				this.configPlugin.load(this.fileConfig);
-			} catch (IOException | InvalidConfigurationException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 
@@ -164,7 +163,7 @@ public class SkyBlockMultiplayer extends JavaPlugin {
 
 		try {
 			this.configPlayer.load(this.filePlayer);
-		} catch (IOException | InvalidConfigurationException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -190,13 +189,13 @@ public class SkyBlockMultiplayer extends JavaPlugin {
 			}
 			try {
 				this.configLanguage.load(this.fileLanguage);
-			} catch (IOException | InvalidConfigurationException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		} else {
 			try {
 				this.configLanguage.load(this.fileLanguage);
-			} catch (IOException | InvalidConfigurationException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 				return;
 			}
@@ -221,7 +220,7 @@ public class SkyBlockMultiplayer extends JavaPlugin {
 
 	private String replaceColor(String s) {
 		for (ChatColor c : ChatColor.values()) {
-			s = s.replaceAll("§" + c.getChar(), "" + ChatColor.getByChar(c.getChar()));
+			s = s.replaceAll("ï¿½" + c.getChar(), "" + ChatColor.getByChar(c.getChar()));
 		}
 		return s;
 	}
@@ -660,7 +659,7 @@ public class SkyBlockMultiplayer extends JavaPlugin {
 					this.setStringbyPath(this.configPlugin, this.fileConfig, Config.OPTIONS_LANGUAGE.path, s);
 					sender.sendMessage(this.pNameChat + Language.MSGS_LANGUAGECHANGED.sentence);
 					return true;
-				} catch (InvalidConfigurationException | IOException ex) {
+				} catch (Exception ex) {
 					this.fileLanguage = sf;
 					sender.sendMessage(this.pNameChat + Language.MSGS_ERROROCCURED.sentence + ": " + ex.getLocalizedMessage());
 					sender.sendMessage(this.pNameChat + Language.MSGS_LANGUAGENOTCHANGED.sentence);
